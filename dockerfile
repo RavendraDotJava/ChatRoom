@@ -1,5 +1,5 @@
 FROM maven:4.0.0
-COPY ..
+COPY --from=build /target/chatroom.jar chatroom.jar
 RUN mvn clean package -Chatroom
 
 
